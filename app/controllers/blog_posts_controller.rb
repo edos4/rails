@@ -8,6 +8,11 @@ class BlogPostsController < ApplicationController
     redirect_to @blog_post
   end
 
+  def show
+    @blog_post = BlogPost.find(params[:id])
+  end
+
+
   private
 
   def blog_post_params
