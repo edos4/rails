@@ -5,6 +5,7 @@ class BlogPostsController < ApplicationController
 
   def create
     @blog_post = BlogPost.create(blog_post_params)
+    redirect_to @blog_post
   end
 
   private
