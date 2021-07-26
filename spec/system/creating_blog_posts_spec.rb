@@ -16,5 +16,6 @@ RSpec.describe "CreatingBlogPosts", driver: :selenium_chrome, js: true do
     blog_post = BlogPost.order("id").last
     expect(blog_post.title).to eq('Hello, World!')
     expect(blog_post.body).to eq('Hello, I say!')
+    sleep(5)
   end
 end
